@@ -4,6 +4,27 @@
         width: 70%;
 }
 
+.coffee{
+        border-radius: 15%;
+        width: 50%;
+}
+.thai{
+        border-radius: 15%;
+        width: 45%;
+}
+.softD{
+        border-radius: 10%;
+        width: 70%;
+
+}
+.yummyFriedRice {
+        border-radius: 10%;
+        width: 60%;
+}
+.yummyCb {
+        border-radius: 10%;
+        width: 60%;
+}
 
 
 /* Styling for the menu items */
@@ -23,31 +44,34 @@
       }
 
       .menu-item-name {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
+          margin-right: 0.5rem;
+
       }
 
       .menu-item-description {
         margin-bottom: 0.5rem;
+          margin-right: 0.5rem;
       }
 
       .menu-item-price {
         font-size: 1.2rem;
-        font-weight: bold;
+        font-weight: Medium;
         margin-bottom: 0.5rem;
       }
 
       /* Styling for the categories */
       .category {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
       }
 
       .category-title {
         font-size: 2.5rem;
         font-weight: bold;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
 
@@ -82,6 +106,7 @@ h3 {
 
 p {
   line-height: 2;
+    margin-bottom: 0.5rem;
 }
 
 hr {
@@ -89,6 +114,10 @@ hr {
   border-bottom: none;
   width: 4%;
   margin: 100px auto;
+}
+
+br{
+    margin-bottom: 0.5rem;
 }
 
 a{
