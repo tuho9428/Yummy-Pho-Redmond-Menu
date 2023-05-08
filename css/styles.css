@@ -1,7 +1,7 @@
 /* Appetizer img */
 .sp-img {
         border-radius: 50%;
-        width: 70%;
+        width: 80%;
 }
 
 .coffee{
@@ -25,6 +25,25 @@
         border-radius: 10%;
         width: 60%;
 }
+.bun26{
+    border-radius: 50%;
+        width: 70%;
+}
+.bun27{
+    border-radius: 50%;
+        width: 80%;
+}
+
+.bun28{
+    border-radius: 50%;
+        width: 80%;
+}
+
+.bun30{
+    border-radius: 50%;
+        width: 80%;
+}
+
 
 
 /* Styling for the menu items */
@@ -44,7 +63,7 @@
       }
 
       .menu-item-name {
-        font-size: 1.8rem;
+        font-size: 2.8rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
           margin-right: 0.5rem;
@@ -52,12 +71,13 @@
       }
 
       .menu-item-description {
+          font-size: 1.5rem;
         margin-bottom: 0.5rem;
           margin-right: 0.5rem;
       }
 
       .menu-item-price {
-        font-size: 1.2rem;
+        font-size: 2.2rem;
         font-weight: Medium;
         margin-bottom: 0.5rem;
       }
@@ -69,7 +89,7 @@
       }
 
       .category-title {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
       }
@@ -86,7 +106,7 @@
 
 h1 {
   color: #66BFBF;
-  font-size: 5.625rem;
+  font-size: 6.625rem;
   margin: 50px auto 0 auto;
   font-family: 'Sacramento', cursive;
 }
@@ -94,18 +114,20 @@ h1 {
 h2 {
   color: #66BFBF;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: normal;
   padding-bottom: 10px;
 }
 
 h3 {
+    font-size: 1.5rem;
   color: #11999E;
   font-family: 'Montserrat', sans-serif;
 }
 
 p {
   line-height: 2;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -168,7 +190,7 @@ a:hover {
 
 .copyright {
   color: #EAF6F6;
-  font-size: 0.75rem;
+  font-size: 1.75rem;
   padding: 20px 0;
 }
 
