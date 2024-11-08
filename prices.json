@@ -1,0 +1,102 @@
+{
+    "_comment_Appetizers": "Appetizers",
+
+    "saladRolls": "$9.00",
+    "grilledPorkSaladRolls": "$10.00",
+    "eggRolls": "$9.00",
+    "vegetarianEggRolls": "$9.00",
+    "deepFriedTofu": "$10.00",
+    "grilledPorkChicken": "$15.00",
+    "garlicChickenWings": "$17.00",
+
+    "_comment_Sandwich": "Sandwich",
+
+    "vietnameseSandwich": "$10.00",
+    "extraEgg": "$3.00",
+    "extraMeat": "$4.00",
+
+    "_comment_Pho": "Pho",
+
+    "phoDacBietSmall": "$17.50",
+    "phoDacBietLarge": "$18.50",
+    "phoSeafoodShrimpSmall": "$17.00",
+    "phoSeafoodShrimpLarge": "$18.00",
+    "phoDefaultSmall": "$16.50",
+    "phoDefaultLarge": "$17.50",
+    "kidPho": "$10.00",
+    "kidPlainPho": "$8.00",
+
+    "_comment_Bun": "Bun",
+
+    "yummyNoodles": "$20.00",
+    "grilledPorkEggRoll": "$19.00",
+    "grilledChickenEggRoll": "$19.00",
+    "grilledChickenOrPork": "$19.00",
+    "grilledShrimpSkewers": "$20.00",
+    "vermicelliEggRoll": "$18.00",
+    "vermicelliVegetarianEggRoll": "$18.00",
+    "vermicelliDeepFriedTofu": "$18.00",
+
+    "_comment_Rice": "Rice",
+
+    "yummyCombo": "$21.00",
+    "yummyChickenCombo": "$21.00",
+    "yummyPorkChop": "$21.00",
+    "yummyGrilledPorkCombo": "$21.00",
+    "grilledChicken": "$19.00",
+    "grilledPork": "$19.00",
+    "grilledShrimp": "$19.00",
+
+    "_comment_FriedRice": "FriedRice",
+
+    "yummyFriedRice": "$20.00",
+    "comboFriedRice": "$20.00",
+    "friedRiceSingleChoice": "$18.00",
+    "friedRiceShrimp": "$2.00",
+    "tofuVegetablesFriedRice": "$18.00",
+    "eggFriedRice": "$17.00",
+
+    "_comment_Vegan": "Vegan",
+
+    "yummyVeganPhoSmall": "$17.00",
+    "yummyVeganPhoLarge": "$18.00",
+    "vegetablesPhoSmall": "$17.00",
+    "vegetablesPhoLarge": "$18.00",
+    "vermicelliTofu": "$18.00",
+    "vermicelliVegEggRoll": "$18.00",
+    "tofuVegFriedRice": "$18.00",
+
+    "_comment_Beverages": "Beverages",
+
+    "vietnameseCoffee": "$6.00",
+    "thaiIcedTea": "$6.00",
+    "lemonadeIcedTea": "$6.00",
+    "vietnameseLemonade": "$6.00",
+    "softDrinks": "$3.00",
+    "tea": "$1.00",
+    "appleJuice": "$4.00",
+
+    "_comment_shakes": "shakes",
+
+    "shakes": "$7.00",
+    "extraTapiocaJelly": "$0.50",
+
+    "_comment_extra": "extra",
+
+
+    "extraNoodles": "$3.00",
+    "eggNoodles": "$3.00",
+    "extraVeggie": "$4.00",
+    "extraTendonTripeMeatballs": "$4.00",
+    "extraRareBeefBrisket": "$4.00",
+    "extraChicken": "$4.00",
+    "extraShrimp": "$4.00",
+    "extraTofu": "$4.00",
+    "sideSteamedRice": "$3.00",
+    "plainBrothSmall": "$5.00",
+    "plainBrothLarge": "$7.00",
+    "bowlSoupMeatballs": "$8.00",
+    "extraWhiteOnion": "$2.00",
+    "extraGreenOnion": "$1.00"
+
+}
