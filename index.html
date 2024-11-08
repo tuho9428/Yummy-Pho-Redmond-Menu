@@ -1,55 +1,1471 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant - Page Updating</title>
+<html>
+  <head>
+    <title>Restaurant Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/favicon.ico" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f8f8f8;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 3rem;
-            color: #11999E;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.5rem;
-            color: #333;
-        }
-        .spinner {
-            margin: 20px auto;
-            width: 50px;
-            height: 50px;
-            border: 6px solid #f3f3f3;
-            border-top: 6px solid #11999E;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+      /* Custom color theme */
+      body {
+        background-color: #f4e7d3; /* Light beige */
+        color: #2f4f4f; /* Dark slate gray */
+      }
+      .title-text {
+        color: #004d4d; /* Deep teal */
+      }
+      .category-title {
+        color: #004d4d;
+        margin-top: 2rem;
+      }
+      .card-body h5 {
+        color: #004d4d;
+      }
+      .text-accent {
+        color: #ff6f61; /* Soft coral for prices */
+        font-size: 1.5em;
+      }
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+      footer {
+        background-color: #2f4f4f;
+      }
+      .extras {
+        font-size: 1em; /* Smaller than main price */
+        color: #555; /* Subtle color for extras */
+      }
+      .extra-price {
+        color: #ff6f61; /* Matching color with main price */
+        font-size: 1em; /* Slightly smaller font size */
+        font-weight: 500; /* Highlight, but softer than main price */
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Yummy Pho</h1>
-        <p>Our page is currently updating. Please check back soon!</p>
-        <div class="spinner"></div>
+  </head>
+
+  <body>
+    <div class="container text-center my-5">
+      <div class="title-text">
+        <h1 class="display-4">Yummy Pho</h1>
+        <h2>Traditional & Vegetarian</h2>
+        <h2>Vietnamese Cuisine</h2>
+        <p class="lead">(425) 498-2288</p>
+        <h3>Business Hours</h3>
+        <p>Everyday: 11am - 9pm</p>
+        <p>8900 161st Ave. NE Suite#145, Redmond, WA 98052</p>
+      </div>
     </div>
-</body>
+
+    <div class="container my-5">
+      <hr />
+      <h1 class="text-center">Restaurant Menu</h1>
+      <hr />
+    </div>
+
+    <!-- Appetizers Section -->
+    <div class="container my-5">
+      <h2 class="category-title text-center pb-4">Appetizers</h2>
+      <div class="row">
+        <!-- First Item with price injection -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="img/th.jpg" alt="Salad Rolls" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">1. Salad Rolls (2 pieces)</h5>
+              <p class="card-text">
+                Lettuce, basil, bean sprout & vermicelli noodles. Served w/
+                peanut sauce.
+              </p>
+              <p class="card-text">Choice of shrimp or tofu.</p>
+              <p class="text-accent mt-auto price" data-item="saladRolls"></p>
+              <!-- Price injected here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Item with Placeholder Image and price injection -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Placeholder Image"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                2. Grilled Pork or Grilled Chicken Salad Rolls (2 pieces)
+              </h5>
+              <p class="card-text">
+                Lettuce, basil, bean sprout & vermicelli noodles. Served w/
+                peanut sauce.
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="grilledPorkSaladRolls"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Item with price injection -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="img/cha_gio.jpg" alt="Egg Rolls" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">3. Egg Rolls (3 pieces)</h5>
+              <p class="card-text">
+                Deep fried egg rolls with pork and vegetables. Served w/ house
+                fish sauce.
+              </p>
+              <p class="text-accent mt-auto price" data-item="eggRolls"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth Item with Placeholder Image and price injection -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Vegetarian Egg Rolls"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">4. Vegetarian Egg Rolls (3 pieces)</h5>
+              <p class="card-text">
+                Deep fried egg roll with tofu & vegetables. Served w/ pineapple
+                sauce.
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="vegetarianEggRolls"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fifth Item with price injection -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/dh_chien.jpg"
+              alt="Deep Fried Tofu"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">5. Deep Fried Tofu</h5>
+              <p class="card-text">
+                Salt, pepper, jalapeno, and onion. Served w/ sweet chili sauce.
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="deepFriedTofu"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sixth Item with price injection -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/ga_ng.jpg"
+              alt="Grilled Pork or Chicken"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">6. Grilled Pork or Grilled Chicken</h5>
+              <p class="card-text">
+                All meats are grilled & marinated with lemongrass & homemade
+                sauce.
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="grilledPorkChicken"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seventh Item with price injection -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/ga_bo.jpg"
+              alt="Garlic Chicken Wings"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">7. Garlic Chicken Wings (8 pieces)</h5>
+              <p class="card-text">
+                Crispy wings sauteed in garlic, onion, jalapeno, and butter.
+                Served w/ sweet chili sauce.
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="garlicChickenWings"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- Sandwiches Section -->
+    <div class="container my-5">
+      <h2 class="category-title text-center pb-4">Vietnamese Sandwiches</h2>
+      <div class="row justify-content-center">
+        <!-- Centered Vietnamese Sandwich Item -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/banh_mi.jpg"
+              alt="Vietnamese Sandwich"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Vietnamese Sandwiches</h5>
+              <p class="card-text">
+                Mayonnaise, cucumber, pickled carrot, cilantro & jalapeno
+              </p>
+              <p class="card-text">Choice of:</p>
+              <ul>
+                <li>Grilled Chicken</li>
+                <li>Grilled Pork</li>
+                <li>Tofu</li>
+              </ul>
+              <p
+                class="text-accent mt-auto price"
+                data-item="vietnameseSandwich"
+              ></p>
+              <!-- Price injected here -->
+              <p class="extras">
+                Extra: Egg
+                <span class="price extra-price" data-item="extraEgg"></span> /
+                Meat
+                <span class="price extra-price" data-item="extraMeat"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Pho Section -->
+    <div class="container my-5">
+      <h2 class="category-title text-center">Yummy Pho</h2>
+      <h3 class="text-center">Vietnamese Rice Noodles Soup</h3>
+      <p class="text-center">
+        Traditional Vietnamese Beef or Chicken Noodle Soup (onion & cilantro
+        included)<br />
+        Served with fresh bean sprout, basil, lime & jalapeno pepper
+      </p>
+
+      <div class="row">
+        <!-- Pho Dac Biet with unique price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/pho_8.jpg"
+              alt="Pho Dac Biet - House Yummy Pho"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">8. Pho Dac Biet - House Yummy Pho</h5>
+              <p class="card-text">
+                A combination of medium rare, brisket, meatball, soft tendon &
+                beef tripe
+              </p>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDacBietSmall"></span> Small /
+                <span class="price" data-item="phoDacBietLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--  9 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">9. Pho Tai - Medium Rare Beef</h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai Chin"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                10. Pho Tai Chin - Medium Rare Beef & Brisket
+              </h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai Chin"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                11. Pho Tai Bo Vien - Medium Rare Beef & Meatball
+              </h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 12 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai Chin"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                12. Pho Tai Gan - Medium Rare Beef & Soft Tendon
+              </h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 13 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai Chin"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                13. Pho Tai Sach - Medium Rare Beef & Beef Tripe
+              </h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 14 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai Chin"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">14. Pho Bo Vien - Meatball</h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 15 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai Chin"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">15. Pho Chin - Brisket</h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 16 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai Chin"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                16. Pho Chin Bo Vien - Brisket & Meatball
+              </h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 17 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai Chin"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">17. Pho Gan - Soft Tendon</h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 18 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="img/pho_18.jpg" alt="Pho Ga" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                18. Pho Ga - Chicken Noodles Soup & Veggie
+              </h5>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 19 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/veg_pho.JPG"
+              alt="Pho Dau Hu & Rau Cai - Tofu Noodles Soup & Veggie"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                19. Pho Dau Hu & Rau Cai - Tofu Noodles Soup & Veggie
+              </h5>
+              <p class="card-text">
+                Fried tofu, carrot, snow peas, broccoli<br />Choice of Beef or
+                Chicken broth
+              </p>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--20 Pho Seafood with unique price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">20. Pho Tom - Shrimp Noodles Soup</h5>
+              <p class="card-text">Choice of Beef or Chicken broth</p>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoSeafoodShrimpSmall"></span>
+                Small /
+                <span class="price" data-item="phoSeafoodShrimpLarge"></span>
+                Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--21 Pho Seafood with unique price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/pho_21.jpg"
+              alt="Pho Hai San - Seafood Noodles Soup"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">21. Pho Hai San - Seafood Noodles Soup</h5>
+              <p class="card-text">
+                Squid, Shrimp, and Fish Ball<br />Choice of Beef or Chicken
+                broth
+              </p>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoSeafoodShrimpSmall"></span>
+                Small /
+                <span class="price" data-item="phoSeafoodShrimpLarge"></span>
+                Large
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 22 Common Pho with default price -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tai Chin"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">22. Pho Rau Cai - Veggie Pho</h5>
+              <p class="card-text">
+                Baby bok choy, carrot, snow peas, brocoli
+                <br />
+                Choice of Beef or Chicken broth
+              </p>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="phoDefaultSmall"></span> Small /
+                <span class="price" data-item="phoDefaultLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kid Pho - Pho Tre Em -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Pho Tre Em - Kids Pho"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                Pho Tre Em - Kids Pho (under 12 years old)
+              </h5>
+              <p class="card-text">Choice of Beef, Chicken, Tofu, or Veggie</p>
+              <p class="text-accent mt-auto price" data-item="kidPho"></p>
+              <!-- Single Price for Kid Pho -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Kid Pho - Plain Pho -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Kid Plain Pho"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Kid Plain Pho</h5>
+              <p class="card-text">Kid noodles soup without meat</p>
+              <p class="text-accent mt-auto price" data-item="kidPlainPho"></p>
+              <!-- Single Price for Kid Plain Pho -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Bun Section -->
+    <div class="container my-5">
+      <h2 class="category-title text-center">Bun - Vermicelli Noodles</h2>
+      <p class="text-center">
+        A cold rice noodles salad bowl with your choice of meat and flavor,
+        served with lettuce, pickled carrot, cucumber, bean sprout, basil, and
+        peanut<br />Served with house fish sauce
+      </p>
+
+      <div class="row">
+        <!-- First Item - Yummy Noodles -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/bun_ym2.jpg"
+              alt="Yummy Noodles"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">23. Yummy Noodles (House Special)</h5>
+              <p class="card-text">
+                A combination of Grilled Shrimp, Grilled Chicken OR Grilled Pork
+                & Pork Egg Roll
+              </p>
+              <p class="text-accent mt-auto price" data-item="yummyNoodles"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Item - Grilled Pork & Egg Roll -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/bun_cha_heo.jpg"
+              alt="Grilled Pork & Egg Roll"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">24. Grilled Pork & Egg Roll</h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="grilledPorkEggRoll"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Item - Grilled Chicken & Egg Roll -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Grilled Chicken & Egg Roll"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">25. Grilled Chicken & Egg Roll</h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="grilledChickenEggRoll"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth Item - Grilled Chicken OR Grilled Pork -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/bun_ga_ng.JPG"
+              alt="Grilled Chicken OR Grilled Pork"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">26. Grilled Chicken OR Grilled Pork</h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="grilledChickenOrPork"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fifth Item - Grilled Shrimp on Skewers -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/bun_tom_ng.JPG"
+              alt="Grilled Shrimp on Skewers"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">27. Grilled Shrimp on Skewers</h5>
+              <p class="card-text">With or without Pork Egg Roll</p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="grilledShrimpSkewers"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sixth Item - Vermicelli Noodles with Egg Roll -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/bun_cha_chay-man.JPG"
+              alt="Vermicelli Noodles with Egg Roll"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">28. Vermicelli Noodles with Egg Roll</h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="vermicelliEggRoll"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seventh Item - Vermicelli Noodles with Vegetarian Egg Roll -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Vermicelli Noodles with Vegetarian Egg Roll"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                29. Vermicelli Noodles with Vegetarian Egg Roll
+              </h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="vermicelliVegetarianEggRoll"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Eighth Item - Vermicelli Noodles with Deep-fried Tofu -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/bun_dh_chien.JPG"
+              alt="Vermicelli Noodles with Deep-fried Tofu"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                30. Vermicelli Noodles with Deep-fried Tofu
+              </h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="vermicelliDeepFriedTofu"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Rice Section -->
+    <div class="container my-5" id="rice-dishes">
+      <h2 class="category-title text-center">Rice Dishes</h2>
+      <p class="text-center">
+        All dishes are served with Steamed Jasmine Rice, cucumber, lettuce &
+        pickled carrot
+      </p>
+
+      <div class="row">
+        <!-- First Item - Yummy Combo -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="img/ym_cb.JPG" alt="Yummy Combo" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">31. Yummy Combo</h5>
+              <p class="card-text">
+                Combination of Grilled Pork Chop, Grilled Shrimp, and Omelet
+              </p>
+              <p class="text-accent mt-auto price" data-item="yummyCombo"></p>
+              <!-- Price injected here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Item - Yummy Chicken Combo -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Yummy Chicken Combo"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">32. Yummy Chicken Combo</h5>
+              <p class="card-text">
+                Combination of Grilled Chicken, Grilled Shrimp, and Omelet
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="yummyChickenCombo"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Item - Yummy Pork Chop -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Yummy Pork Chop"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">33. Yummy Pork Chop</h5>
+              <p class="card-text">Grilled Pork Chop only</p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="yummyPorkChop"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth Item - Yummy Grilled Pork Combo -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Yummy Grilled Pork Combo"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">34. Yummy Grilled Pork Combo</h5>
+              <p class="card-text">
+                Combination of Grilled Pork, Grilled Shrimp, and Omelet
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="yummyGrilledPorkCombo"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fifth Item - Grilled Chicken -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Grilled Chicken"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">35. Grilled Chicken</h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="grilledChicken"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sixth Item - Grilled Pork -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Grilled Pork"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">36. Grilled Pork</h5>
+              <p class="text-accent mt-auto price" data-item="grilledPork"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seventh Item - Grilled Shrimp -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Grilled Shrimp"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">37. Grilled Shrimp</h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="grilledShrimp"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Fried Rice Section -->
+    <div class="container my-5" id="fried-rice">
+      <h2 class="category-title text-center">Fried Rice</h2>
+
+      <div class="row">
+        <!-- First Item - Yummy Fried Rice -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/ym_fr.JPG"
+              alt="Yummy Fried Rice"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">38. Yummy Fried Rice</h5>
+              <p class="card-text">
+                Fried Rice with Grilled Shrimp, Grilled Chicken & Pork Egg Roll
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="yummyFriedRice"
+              ></p>
+              <!-- Price injected here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Item - Combo Fried Rice -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/shrimp-fried-rice-.jpg"
+              alt="Combo Fried Rice"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">39. Combo Fried Rice</h5>
+              <p class="card-text">
+                Combination of B.B.Q Pork, Shrimp & Chicken.
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="comboFriedRice"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Item - Fried Rice (Single Choice of Meat) -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/chicken-fried-rice-2.jpg"
+              alt="Fried Rice"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">40. Fried Rice</h5>
+              <p class="card-text">Single Choice of Pork OR Chicken</p>
+              <p class="extras">
+                OR Shrimp add
+                <span
+                  class="price extra-price"
+                  data-item="friedRiceShrimp"
+                ></span>
+              </p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="friedRiceSingleChoice"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth Item - Tofu & Vegetables Fried Rice -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/fr_dh_2.JPG"
+              alt="Tofu & Vegetables Fried Rice"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">41. Tofu & Vegetables Fried Rice</h5>
+              <p class="card-text">With Egg or without Egg</p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="tofuVegetablesFriedRice"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fifth Item - Egg Fried Rice -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/egg-fried-rice.jpg"
+              alt="Egg Fried Rice"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">42. Egg Fried Rice</h5>
+              <p class="text-accent mt-auto price" data-item="eggFriedRice"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Vegetarian Section -->
+    <div class="container my-5" id="vegetarian-dishes">
+      <h2 class="category-title text-center">Vegetarian Dishes</h2>
+
+      <div class="row">
+        <!-- First Item - Yummy Vegan Pho -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/veg_pho.JPG"
+              alt="Yummy Vegan Pho"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">V1. Yummy Vegan Pho</h5>
+              <p class="card-text">
+                Tofu, carrot, snow peas, broccoli<br />Choice of white fresh
+                tofu OR deep-fried tofu & veggie
+              </p>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="yummyVeganPhoSmall"></span> Small
+                /
+                <span class="price" data-item="yummyVeganPhoLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Item - Vegetables Pho -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Vegetables Pho"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">V2. Vegetables Pho</h5>
+              <p class="card-text">
+                Baby bok choy, carrot, snow peas, broccoli
+              </p>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="vegetablesPhoSmall"></span> Small
+                /
+                <span class="price" data-item="vegetablesPhoLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Item - Vermicelli Noodles with Deep-fried Tofu -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/bun_dh_chien.JPG"
+              alt="Vermicelli Noodles with Deep-fried Tofu"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                V3. Vermicelli Noodles with Deep-fried Tofu
+              </h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="vermicelliTofu"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth Item - Vermicelli Noodles with Vegetarian Egg Roll -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/bun_cha_chay-man.JPG"
+              alt="Vermicelli Noodles with Vegetarian Egg Roll"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                V4. Vermicelli Noodles with Vegetarian Egg Roll
+              </h5>
+              <p
+                class="text-accent mt-auto price"
+                data-item="vermicelliVegEggRoll"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fifth Item - Tofu & Vegetables Fried Rice -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/fr_dh.jpg"
+              alt="Tofu & Vegetables Fried Rice"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">V5. Tofu & Vegetables Fried Rice</h5>
+              <p class="card-text">With Egg or without Egg</p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="tofuVegFriedRice"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Beverages Section -->
+    <div class="container my-5" id="beverages">
+      <h2 class="category-title text-center">Beverages</h2>
+
+      <div class="row">
+        <!-- First Item - Vietnamese Coffee -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/cf1.jpg"
+              alt="Vietnamese Coffee"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Vietnamese Coffee</h5>
+              <p class="card-text">With condensed milk<br />Hot or Iced</p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="vietnameseCoffee"
+              ></p>
+              <!-- Price injected here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Item - Thai Iced Tea -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/thai_tea.jpg"
+              alt="Thai Iced Tea"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Thai Iced Tea</h5>
+              <p class="card-text">With half and half</p>
+              <p class="text-accent mt-auto price" data-item="thaiIcedTea"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Item - Lemonade Iced Tea -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Lemonade Iced Tea"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Lemonade Iced Tea</h5>
+              <p class="card-text">Fresh squeezed lemonade with iced tea</p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="lemonadeIcedTea"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth Item - Fresh Vietnamese Lemonade -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="https://via.placeholder.com/200?text=No+Image+Available"
+              alt="Fresh Vietnamese Lemonade"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Fresh Vietnamese Lemonade</h5>
+              <p class="card-text">Fresh squeezed lemonade with soda</p>
+              <p
+                class="text-accent mt-auto price"
+                data-item="vietnameseLemonade"
+              ></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fifth Item - Soft Drinks -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/soft_drink.jpg"
+              alt="Soft Drinks"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Soft Drinks</h5>
+              <p class="card-text">
+                Coke, Diet Coke, Sprite, Pepsi, Fanta, Dr. Pepper
+              </p>
+              <p class="text-accent mt-auto price" data-item="softDrinks"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sixth Item - Tea -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="img/tea.jpg" alt="Tea" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Tea (each)</h5>
+              <p class="card-text">Jasmine green tea</p>
+              <p class="text-accent mt-auto price" data-item="tea"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seventh Item - Apple Juice -->
+        <!-- <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="https://via.placeholder.com/200?text=No+Image+Available" alt="Apple Juice">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Apple Juice</h5>
+              <p class="text-accent mt-auto price" data-item="appleJuice"></p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <hr />
+
+    <!-- Shakes 1 -->
+    <div class="container my-5" id="shakes">
+      <h2 class="category-title text-center">Shakes</h2>
+      <div class="row justify-content-center">
+        <!-- First Item - Shakes with Choice of Flavors -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              src="img/taro_shake.png"
+              alt="Shakes with your choice of flavors"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Shakes with your choice of flavors</h5>
+              <p class="card-text">
+                Taro, Mango, Lychee,
+                <br />
+                Strawberry, Papaya, Honeydew, <br />Passion Fruit, Coconut,
+                Coffee
+              </p>
+              <p class="text-accent mt-auto price" data-item="shakes"></p>
+              <!-- Price injected here -->
+              <p class="extras">
+                Extra Tapioca Pearl / Jelly add
+                <span
+                  class="price extra-price"
+                  data-item="extraTapiocaJelly"
+                ></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Extra 13 -->
+    <div class="container my-5" id="extras">
+      <h2 class="category-title text-center">Extras</h2>
+    
+      <div class="row">
+        <!-- First Item - Extra Noodles -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Extra Noodles</h5>
+              <p class="card-text">Rice noodles</p>
+              <p class="text-accent mt-auto price" data-item="extraNoodles"></p> <!-- Price injected here -->
+            </div>
+          </div>
+        </div>
+    
+        <!-- Second Item - Egg Noodles -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Egg Noodles</h5>
+              <p class="card-text">(for substitute)</p>
+              <p class="text-accent mt-auto price" data-item="eggNoodles"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Third Item - Extra Veggie -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Extra Veggie</h5>
+              <p class="card-text">Baby bok choy, carrot, snow peas, broccoli</p>
+              <p class="text-accent mt-auto price" data-item="extraVeggie"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Fourth Item - Extra Tendon OR Tripe OR Meatballs -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Extra Tendon OR Tripe OR Meatballs</h5>
+              <p class="text-accent mt-auto price" data-item="extraTendonTripeMeatballs"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Fifth Item - Extra Rare Beef OR Brisket -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Extra Rare Beef OR Brisket</h5>
+              <p class="text-accent mt-auto price" data-item="extraRareBeefBrisket"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Sixth Item - Extra Chicken -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Extra Chicken</h5>
+              <p class="text-accent mt-auto price" data-item="extraChicken"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Seventh Item - Extra Shrimp -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Extra Shrimp</h5>
+              <p class="card-text">(5 pieces)</p>
+              <p class="text-accent mt-auto price" data-item="extraShrimp"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Eighth Item - Extra Tofu -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Extra Tofu</h5>
+              <p class="card-text">Fired Tofu Or  Soft white Tofu</p>
+              <p class="text-accent mt-auto price" data-item="extraTofu"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Ninth Item - Side Order of Steamed Rice -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Side Order of Steamed Rice</h5>
+              <p class="text-accent mt-auto price" data-item="sideSteamedRice"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Tenth Item - Plain Broth -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Plain Broth</h5>
+              <p class="card-text">Choice of Beef Broth, Chicken Broth, or Veggie Broth</p>
+              <p class="text-accent mt-auto">
+                <span class="price" data-item="plainBrothSmall"></span> Small /
+                <span class="price" data-item="plainBrothLarge"></span> Large
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Eleventh Item - Bowl of Soup & Meatballs -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Bowl of Soup & Meatballs</h5>
+              <p class="card-text">Small broth with beef meatballs</p>
+              <p class="text-accent mt-auto price" data-item="bowlSoupMeatballs"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Twelfth Item - Extra White Onion -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Extra White Onion</h5>
+              <p class="card-text">Small plate of sliced white onion</p>
+              <p class="text-accent mt-auto price" data-item="extraWhiteOnion"></p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Thirteenth Item - Extra Green Onion -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Extra Green Onion</h5>
+              <p class="text-accent mt-auto price" data-item="extraGreenOnion"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4">
+      <!-- <p>&copy; <span id="currentYear"></span> by YummyPho. Published on: <span id="publishDate"></span></p> -->
+      <p>
+        &copy; <span id="currentYear"></span> by YummyPho. Published on:
+        <span id="publishDate">11/6/2024</span>
+      </p>
+      <p>
+        *Consuming raw or undercooked meats, poultry, seafood, shellfish, or egg
+        may increase your risk of foodborne illness.
+      </p>
+      <p>**You may find beef hair in tendon.</p>
+      <p>Prices are subject to change.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Set current year and today's date
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+      // document.getElementById("publishDate").textContent = new Date().toLocaleDateString();
+
+      // Load prices from JSON file and insert them into HTML
+      fetch("prices.json")
+        .then((response) => response.json())
+        .then((data) => {
+          document.querySelectorAll(".price").forEach((element) => {
+            const itemKey = element.getAttribute("data-item");
+            element.textContent = data[itemKey] || "Price Unavailable";
+          });
+        })
+        .catch((error) => console.error("Error loading prices:", error));
+    </script>
+  </body>
 </html>
