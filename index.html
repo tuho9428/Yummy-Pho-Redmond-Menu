@@ -35,11 +35,31 @@
         height: 200px;
         object-fit: cover;
       }
+      /* Increase the font size of the title */
+.card-title {
+  font-size: 3em; /* Adjust to desired size */
+}
+
+/* Increase the font size of the description text */
+.card-text {
+  font-size: 2.4em; /* Adjust to desired size */
+}
+
+/* Increase the font size of the price text */
+.text-accent {
+  font-size: 2.6em; /* Adjust to desired size */
+  font-weight: bold; /* Optional: Make the price bold */
+}
+
+/* Increase font size for the category title */
+.category-title {
+  font-size: 4em; /* Adjust to desired size */
+}
       footer {
         background-color: #2f4f4f;
       }
       .extras {
-        font-size: 1em; /* Smaller than main price */
+        font-size: 2em; /* Smaller than main price */
         color: #555; /* Subtle color for extras */
       }
       .extra-price {
@@ -47,7 +67,30 @@
         font-size: 1em; /* Slightly smaller font size */
         font-weight: 500; /* Highlight, but softer than main price */
       }
-      /* Sidebar styling */
+      .lead {
+        font-size: 3em; /* Slightly smaller font size */
+      }
+      p {
+        font-size: 2em; /* Slightly smaller font size */
+
+      }
+      .display-4 {
+        font-size: 7em; /* Slightly smaller font size */
+
+      }
+      h1  {
+        font-size: 6em; /* Slightly smaller font size */
+
+      }
+
+      h2 {
+        font-size: 5em; /* Slightly smaller font size */
+
+      }
+      h3 {
+        font-size: 4em; /* Slightly smaller font size */
+
+      }
       .sidebar {
         position: fixed;
         top: 0;
@@ -1615,6 +1658,8 @@
     </div>
     <hr />
 
+    
+
     <!-- Footer -->
     <footer class="text-white text-center py-4">
       <!-- <p>&copy; <span id="currentYear"></span> by YummyPho. Published on: <span id="publishDate"></span></p> -->
@@ -1630,8 +1675,13 @@
       <p>Prices are subject to change.</p>
     </footer>
 
+  </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script>
       // Set current year and today's date
       document.getElementById("currentYear").textContent =
